@@ -1,0 +1,41 @@
+{
+  "metadata": [ 
+    {
+      "src": [
+        {
+          "src": "../../",
+          "files": [
+            "**.csproj"
+          ],
+          "exclude": [ // list of files to be excluded, relative to src/cwd parameter, if any
+            "**/obj/**",
+            "**/bin/**",
+            "**/.git/**",
+            "**/.va/**",
+            "**/.vs/**"
+          ],
+          "dot": false, // find dot files and folders (like .git)
+          "case": true // case sensitive search...
+        }
+      ],
+      // ATTENTION: When changing this path, you need to update Postprocessor.cs accordingly
+      "dest": "./intermediate_files/metadata/resources/",
+      "filter": "filterConfig.yml"
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        // ATTENTION: When changing this path, you need to update Postprocessor.cs accordingly
+        "src": "./intermediate_files/metadata/",
+        "files": [
+          "**.yml"
+        ]
+      }
+    ],
+    "postProcessors": [ "NamespacePostProcessor" ],
+    "dest": "../../Dokumentation/",
+    // ATTENTION: When changing this path, you need to update Postprocessor.cs accordingly
+    "intermediateFolder": "./intermediate_files/build_step/", // intermediate files
+  }
+}
