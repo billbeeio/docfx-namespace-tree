@@ -12,6 +12,7 @@
 > this addon as an npm package
 
 ## Install (as long as npm package is not available)
+> Note: find the example project in example_documentation that shows you how things are set up
 > I assume you already have a running docfx nuget installation using docfx.console v 2.42.3 or higher
   successfully creating some documentation.
 > checkout https://github.com/dotnet/docfx
