@@ -38,6 +38,7 @@
   as shown in example_docfx.json file.
 > add the post processor to your docfx.json config file as shown in example_docfx.json file.
 > check/adapt the pathes in NamespacePostProcessor.proj post build step if something doesn't work.
+> make sure you override the default docfx template with the contents from resources\templates\override
 > Build your documentation solution. Documentation should have nested namespaces now in html namespace nav bar.
 
 ## Problems to solve to make this an npm package
