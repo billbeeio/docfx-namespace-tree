@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2F8FF2C6-A9CB-483C-BE45-E26DD6CF51EB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NamespacePostprocessor</RootNamespace>
+    <AssemblyName>NamespacePostprocessor</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="PostProcessor.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.DocAsCode.Plugins, Version=2.42.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.DocAsCode.Plugins.2.42.3\lib\net462\Microsoft.DocAsCode.Plugins.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpYaml.NetStandard, Version=1.5.4.20961, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpYaml.NetStandard.1.5.4\lib\net45\SharpYaml.NetStandard.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Collections.Immutable, Version=1.2.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.1.5.0\lib\netstandard2.0\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Composition.AttributedModel, Version=1.0.31.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Composition.AttributedModel.1.0.31\lib\portable-net45+win8+wp8+wpa81\System.Composition.AttributedModel.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Composition.Convention, Version=1.0.31.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Composition.Convention.1.0.31\lib\portable-net45+win8+wp8+wpa81\System.Composition.Convention.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Composition.Hosting, Version=1.0.31.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Composition.Hosting.1.0.31\lib\portable-net45+win8+wp8+wpa81\System.Composition.Hosting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Composition.Runtime, Version=1.0.31.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Composition.Runtime.1.0.31\lib\portable-net45+win8+wp8+wpa81\System.Composition.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Composition.TypedParts, Version=1.0.31.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Composition.TypedParts.1.0.31\lib\portable-net45+win8+wp8+wpa81\System.Composition.TypedParts.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy $(TargetDir) $(SolutionDir)resources\templates\billbee\Plugins\
+copy $(TargetDir) $(SolutionDir)resources\templates\billbee\Plugins\
+copy $(SolutionDir)DocFx_dlls_changed $(SolutionDir)packages\docfx.console.2.42.3\tools</PostBuildEvent>
+  </PropertyGroup>
+</Project>
