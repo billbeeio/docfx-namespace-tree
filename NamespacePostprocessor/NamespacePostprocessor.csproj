@@ -72,8 +72,8 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>copy $(TargetDir) $(SolutionDir)resources\templates\billbee\Plugins\
-copy $(TargetDir) $(SolutionDir)resources\templates\billbee\Plugins\
+    <PostBuildEvent>copy $(TargetDir) $(SolutionDir)resources\templates\override\Plugins\
+copy $(TargetDir) $(SolutionDir)resources\templates\override\Plugins\
 copy $(SolutionDir)DocFx_dlls_changed $(SolutionDir)packages\docfx.console.2.42.3\tools</PostBuildEvent>
   </PropertyGroup>
 </Project>
