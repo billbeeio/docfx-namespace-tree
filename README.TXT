@@ -12,7 +12,7 @@
 > this addon as an npm package
 
 ## Install (as long as npm package is not available)
-> Note: Open and build DocFx_Example.sln in this folder that shows you how things are set up.
+> Note: Open and build DocFx_Example.sln in this folder that shows you how things are set up. It should build immediately after restoring nuget packages.
 > I assume you already have a running docfx nuget installation using docfx.console v 2.42.3 or higher
   successfully creating some documentation.
 > checkout https://github.com/dotnet/docfx
