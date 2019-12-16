@@ -4,3 +4,13 @@
 
 > This addon makes them nested.
 
+
+## STATE
+> Works, but must be build in an awkward way as described below
+
+## GOAL
+> this addon as an npm package
+
+## Problems to solve to make this an npm package
+
+## Install
