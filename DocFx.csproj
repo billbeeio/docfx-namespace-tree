@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8B546033-327D-4283-944E-5B85AF80C250}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DocFx</RootNamespace>
+    <AssemblyName>DocFx</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="NamespacePostprocessor\PostProcessor.cs" />
+    <Compile Include="NamespacePostprocessor\Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="api\.gitignore" />
+    <None Include="api\index.md" />
+    <None Include="articles\intro.md" />
+    <None Include="articles\toc.md" />
+    <None Include="docfx.json" />
+    <None Include="filterConfig.yml" />
+    <None Include="NamespacePostprocessor\app.config" />
+    <None Include="NamespacePostprocessor\bin\Debug\NamespacePostprocessor.dll.config" />
+    <None Include="NamespacePostprocessor\docfx.json" />
+    <None Include="NamespacePostprocessor\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="NamespacePostprocessor\obj\Debug\NamespacePostprocessor.csproj.CopyComplete" />
+    <None Include="NamespacePostprocessor\obj\Debug\NamespacePostprocessor.csproj.CoreCompileInputs.cache" />
+    <None Include="NamespacePostprocessor\obj\Debug\NamespacePostprocessor.csprojAssemblyReference.cache" />
+    <None Include="NamespacePostprocessor\packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="resources\templates\default\conceptual.html.primary.tmpl" />
+    <None Include="resources\templates\default\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="resources\templates\default\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="resources\templates\default\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="resources\templates\default\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="resources\templates\default\layout\_master.tmpl" />
+    <None Include="resources\templates\default\ManagedReference.html.primary.tmpl" />
+    <None Include="resources\templates\default\partials\affix.tmpl.partial" />
+    <None Include="resources\templates\default\partials\breadcrumb.tmpl.partial" />
+    <None Include="resources\templates\default\partials\class.header.tmpl.partial" />
+    <None Include="resources\templates\default\partials\class.tmpl.partial" />
+    <None Include="resources\templates\default\partials\classSubtitle.tmpl.partial" />
+    <None Include="resources\templates\default\partials\customMREFContent.tmpl.partial" />
+    <None Include="resources\templates\default\partials\dd-li.tmpl.partial" />
+    <None Include="resources\templates\default\partials\enum.tmpl.partial" />
+    <None Include="resources\templates\default\partials\footer.tmpl.partial" />
+    <None Include="resources\templates\default\partials\head.tmpl.partial" />
+    <None Include="resources\templates\default\partials\li.tmpl.partial" />
+    <None Include="resources\templates\default\partials\logo.tmpl.partial" />
+    <None Include="resources\templates\default\partials\namespace.tmpl.partial" />
+    <None Include="resources\templates\default\partials\namespaceSubtitle.tmpl.partial" />
+    <None Include="resources\templates\default\partials\navbar.tmpl.partial" />
+    <None Include="resources\templates\default\partials\rest.child.tmpl.partial" />
+    <None Include="resources\templates\default\partials\rest.tmpl.partial" />
+    <None Include="resources\templates\default\partials\scripts.tmpl.partial" />
+    <None Include="resources\templates\default\partials\searchResults.tmpl.partial" />
+    <None Include="resources\templates\default\partials\title.tmpl.partial" />
+    <None Include="resources\templates\default\partials\toc.tmpl.partial" />
+    <None Include="resources\templates\default\partials\uref\class.header.tmpl.partial" />
+    <None Include="resources\templates\default\partials\uref\class.tmpl.partial" />
+    <None Include="resources\templates\default\partials\uref\enum.tmpl.partial" />
+    <None Include="resources\templates\default\partials\uref\parameters.tmpl.partial" />
+    <None Include="resources\templates\default\partials\_affix.liquid" />
+    <None Include="resources\templates\default\partials\_breadcrumb.liquid" />
+    <None Include="resources\templates\default\partials\_footer.liquid" />
+    <None Include="resources\templates\default\partials\_head.liquid" />
+    <None Include="resources\templates\default\partials\_logo.liquid" />
+    <None Include="resources\templates\default\partials\_navbar.liquid" />
+    <None Include="resources\templates\default\partials\_scripts.liquid" />
+    <None Include="resources\templates\default\partials\_toc.liquid" />
+    <None Include="resources\templates\default\RestApi.html.primary.tmpl" />
+    <None Include="resources\templates\default\search-stopwords.json" />
+    <None Include="resources\templates\default\toc.html.tmpl" />
+    <None Include="resources\templates\default\token.json" />
+    <None Include="resources\templates\default\UniversalReference.html.primary.tmpl" />
+    <None Include="resources\templates\override\partials\namespaceSubtitle.tmpl.partial" />
+    <None Include="resources\templates\override\token.json" />
+    <None Include="toc.yml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".gitignore" />
+    <Content Include="DocFx_Dlls_changed\Microsoft.DocAsCode.Build.Common.dll" />
+    <Content Include="DocFx_Dlls_changed\Microsoft.DocAsCode.Build.Common.pdb" />
+    <Content Include="DocFx_Dlls_changed\Microsoft.DocAsCode.Build.Engine.dll" />
+    <Content Include="DocFx_Dlls_changed\Microsoft.DocAsCode.Build.Engine.pdb" />
+    <Content Include="DocFx_Dlls_changed\Microsoft.DocAsCode.Build.ManagedReference.dll" />
+    <Content Include="DocFx_Dlls_changed\Microsoft.DocAsCode.Build.ManagedReference.pdb" />
+    <Content Include="DocFx_Dlls_changed\Microsoft.DocAsCode.Build.TableOfContents.dll" />
+    <Content Include="DocFx_Dlls_changed\Microsoft.DocAsCode.Build.TableOfContents.pdb" />
+    <Content Include="DocFx_Dlls_changed\Microsoft.DocAsCode.Plugins.dll" />
+    <Content Include="DocFx_Dlls_changed\Microsoft.DocAsCode.Plugins.pdb" />
+    <Content Include="DocFx_Dlls_changed\Microsoft.DocAsCode.YamlSerialization.dll" />
+    <Content Include="DocFx_Dlls_changed\Microsoft.DocAsCode.YamlSerialization.pdb" />
+    <Content Include="NamespacePostprocessor\bin\Debug\Microsoft.DocAsCode.Plugins.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\Microsoft.Win32.Primitives.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\NamespacePostprocessor.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\NamespacePostprocessor.pdb" />
+    <Content Include="NamespacePostprocessor\bin\Debug\netstandard.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\Newtonsoft.Json.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\Newtonsoft.Json.xml" />
+    <Content Include="NamespacePostprocessor\bin\Debug\SharpYaml.NetStandard.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.AppContext.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Collections.Concurrent.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Collections.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Collections.Immutable.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Collections.Immutable.xml" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Collections.NonGeneric.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Collections.Specialized.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.ComponentModel.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.ComponentModel.EventBasedAsync.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.ComponentModel.Primitives.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.ComponentModel.TypeConverter.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Composition.AttributedModel.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Composition.Convention.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Composition.Hosting.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Composition.Runtime.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Composition.TypedParts.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Console.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Data.Common.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Diagnostics.Contracts.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Diagnostics.Debug.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Diagnostics.FileVersionInfo.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Diagnostics.Process.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Diagnostics.StackTrace.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Diagnostics.TextWriterTraceListener.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Diagnostics.Tools.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Diagnostics.TraceSource.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Diagnostics.Tracing.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Drawing.Primitives.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Dynamic.Runtime.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Globalization.Calendars.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Globalization.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Globalization.Extensions.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.IO.Compression.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.IO.Compression.ZipFile.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.IO.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.IO.FileSystem.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.IO.FileSystem.DriveInfo.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.IO.FileSystem.Primitives.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.IO.FileSystem.Watcher.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.IO.IsolatedStorage.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.IO.MemoryMappedFiles.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.IO.Pipes.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.IO.UnmanagedMemoryStream.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Linq.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Linq.Expressions.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Linq.Parallel.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Linq.Queryable.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Net.Http.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Net.NameResolution.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Net.NetworkInformation.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Net.Ping.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Net.Primitives.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Net.Requests.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Net.Security.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Net.Sockets.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Net.WebHeaderCollection.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Net.WebSockets.Client.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Net.WebSockets.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.ObjectModel.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Reflection.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Reflection.Extensions.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Reflection.Primitives.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Resources.Reader.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Resources.ResourceManager.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Resources.Writer.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Runtime.CompilerServices.VisualC.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Runtime.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Runtime.Extensions.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Runtime.Handles.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Runtime.InteropServices.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Runtime.Numerics.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Runtime.Serialization.Formatters.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Runtime.Serialization.Json.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Runtime.Serialization.Primitives.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Runtime.Serialization.Xml.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Security.Claims.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Security.Cryptography.Algorithms.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Security.Cryptography.Csp.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Security.Cryptography.Encoding.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Security.Cryptography.Primitives.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Security.Cryptography.X509Certificates.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Security.Principal.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Security.SecureString.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Text.Encoding.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Text.Encoding.Extensions.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Text.RegularExpressions.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Threading.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Threading.Overlapped.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Threading.Tasks.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Threading.Tasks.Parallel.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Threading.Thread.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Threading.ThreadPool.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Threading.Timer.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.ValueTuple.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Xml.ReaderWriter.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Xml.XDocument.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Xml.XmlDocument.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Xml.XmlSerializer.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Xml.XPath.dll" />
+    <Content Include="NamespacePostprocessor\bin\Debug\System.Xml.XPath.XDocument.dll" />
+    <Content Include="NamespacePostprocessor\NamespacePostprocessor.csproj" />
+    <Content Include="NamespacePostprocessor\NamespacePostprocessor.sln" />
+    <Content Include="NamespacePostprocessor\obj\Debug\NamespacePostprocessor.csproj.FileListAbsolute.txt" />
+    <Content Include="NamespacePostprocessor\obj\Debug\NamespacePostprocessor.dll" />
+    <Content Include="NamespacePostprocessor\obj\Debug\NamespacePostprocessor.pdb" />
+    <Content Include="resources\templates\default\common.js" />
+    <Content Include="resources\templates\default\conceptual.extension.js" />
+    <Content Include="resources\templates\default\conceptual.html.primary.js" />
+    <Content Include="resources\templates\default\favicon.ico" />
+    <Content Include="resources\templates\default\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="resources\templates\default\logo.svg" />
+    <Content Include="resources\templates\default\ManagedReference.common.js" />
+    <Content Include="resources\templates\default\ManagedReference.extension.js" />
+    <Content Include="resources\templates\default\ManagedReference.html.primary.js" />
+    <Content Include="resources\templates\default\RestApi.common.js" />
+    <Content Include="resources\templates\default\RestApi.extension.js" />
+    <Content Include="resources\templates\default\RestApi.html.primary.js" />
+    <Content Include="resources\templates\default\styles\docfx.css" />
+    <Content Include="resources\templates\default\styles\docfx.js" />
+    <Content Include="resources\templates\default\styles\docfx.vendor.css" />
+    <Content Include="resources\templates\default\styles\docfx.vendor.js" />
+    <Content Include="resources\templates\default\styles\lunr.js" />
+    <Content Include="resources\templates\default\styles\lunr.min.js" />
+    <Content Include="resources\templates\default\styles\main.css" />
+    <Content Include="resources\templates\default\styles\main.js" />
+    <Content Include="resources\templates\default\styles\search-worker.js" />
+    <Content Include="resources\templates\default\toc.extension.js" />
+    <Content Include="resources\templates\default\toc.html.js" />
+    <Content Include="resources\templates\default\UniversalReference.common.js" />
+    <Content Include="resources\templates\default\UniversalReference.extension.js" />
+    <Content Include="resources\templates\default\UniversalReference.html.primary.js" />
+    <Content Include="resources\templates\override\ManagedReference.common.js" />
+    <Content Include="resources\templates\override\Plugins\dummy.txt" />
+    <Content Include="resources\templates\override\toc.extension.js" />
+    <Content Include="resources\templates\override\UniversalReference.common.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
+    <Folder Include="bin\Release\" />
+    <Folder Include="NamespacePostprocessor\obj\Debug\TempPE\" />
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <Import Project="packages\docfx.console.2.42.3\build\docfx.console.targets" Condition="Exists('packages\docfx.console.2.42.3\build\docfx.console.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\docfx.console.2.42.3\build\docfx.console.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\docfx.console.2.42.3\build\docfx.console.targets'))" />
+  </Target>
+</Project>

@@ -1,0 +1,11 @@
+apiRules:
+- exclude:
+      uidRegex: ^System\.Object
+      type: Type
+- exclude:
+      uidRegex: ^System\.Collections
+      type: Type
+- exclude:
+      uidRegex: ^System\.Exception
+      type: Type
+
