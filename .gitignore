@@ -10,3 +10,4 @@
 _site
 /log.txt
 /**/.vs
+/resources/templates/override/Plugins
