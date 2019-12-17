@@ -6,10 +6,13 @@
 
 
 ## STATE
-> Works, but must be build in an awkward way as described below
+> In Progress 
+> waiting for this pull request: https://github.com/dotnet/docfx/pull/5371
+> I strongly recommend to wait for this to be released as a nuget package
+> If you're urgent, you can try to get this running -> see Install section below
 
 ## GOAL
-> this addon as an npm package
+> this addon as an nuget package
 
 ## Install (as long as npm package is not available)
 > Note: Open and build DocFx_Example.sln in this folder that shows you how things are set up. It should build immediately after restoring nuget packages.
@@ -43,11 +46,10 @@
 > Build your documentation solution. Documentation should have nested namespaces now in html namespace nav bar.
 
 ## Problems to solve to make this an npm package
-> wait for fix https://github.com/dotnet/docfx/pull/5366 to be released for docfx:
-> generalize docfx code changes, create pull request & wait for release of docfx with this feature:
-  https://github.com/billbeeio/docfx/commit/5f05a8228b9f3dce9fddeec253b50dc13da445cd
-> create an npm package from this project
+> wait for fix https://github.com/dotnet/docfx/pull/5371 to be released for docfx:
+> create an nuget package from this project
 > solve this: This post processor currently assumes the files to be in folder 'intermediate_files'.
   This folder is configurable in the docfx config file. We want to let the postprocessor know this
   folder location automatically. E.g. docFx could add the location to the parameters handed to the postprocessor.
+> solve this: check if html template files can be installed by the nuget package to be created.
   
