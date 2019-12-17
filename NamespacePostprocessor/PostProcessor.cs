@@ -24,7 +24,7 @@ namespace Billbee.DocFx
                 if (yamlFilePaths == null)
                     return metadata;
 
-                List<string> createdFiles = new List<string>();
+                IList<string> createdFiles = new List<string>();
                 
                 foreach (var yamlFilePath in yamlFilePaths)
                 {
@@ -50,10 +50,10 @@ namespace Billbee.DocFx
                     }
                 }
 
-                // ATTENTION: When changing 'nestedNamespaceFiles' or 'nestedNamespaceSourceDir'
+                // ATTENTION: When changing 'yamlFiles' or 'yamlFileSourceDir'
                 //            here, you'll need to update DocumentBuilder.cs in DocFx source code, too.
-                metadata = metadata.Add("nestedNamespaceFiles", createdFiles);
-                metadata = metadata.Add("nestedNamespaceSourceDir", "./intermediate_files/metadata/");
+                metadata = metadata.Add("yamlFiles", createdFiles);
+                metadata = metadata.Add("yamlFileSourceDir", "./intermediate_files/metadata/");
             }
             catch (Exception e)
             {
